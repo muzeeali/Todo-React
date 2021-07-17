@@ -1,17 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header';
+import React, { useState } from 'react';
 
 function App() {
 
-  
-  return (
-    <div  className="App">
-     <h1> 
-       <input type="text"></input>
-       <button>SUBMIT</button>
-     </h1>
-     
 
+
+  const [Ivalue,setValue]=useState("");
+  const [item,setItem]=useState([]);
+
+  const setVal=()=>{
+    setItem((old)=>{
+      return( [...old,Ivalue]);
+    });
+  };
+
+  return (
+  
+    <div >
+  
+<Header/>
+      <form> 
+        <label>NEW TODO</label>
+       <input value={Ivalue}  onChange={e => setValue(e.target.value)} type="text"></input>
+       <button onClick={setVal} type="submit">ADD</button>
+     
+       </form>
+<ul>
+  
+     {item.map((itemVal) =>
+    {
+return <li >{itemVal}</li>
+    })}
+  
+</ul>
     </div>
   );
 }
