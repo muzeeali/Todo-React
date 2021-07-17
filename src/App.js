@@ -2,21 +2,12 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  var name="zeeshan"
   return (
-    <div className="App">
+    <div  className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      
+       <h1 style= {{backgroundColor:'red'}}>hey <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"></img> </h1>
       </header>
     </div>
   );
