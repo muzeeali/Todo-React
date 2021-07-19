@@ -7,13 +7,14 @@ function App() {
 
 
 
-  const [Ivalue,setValue]=useState("");
+  const [iValue,setValue]=useState("");
   const [item,setItem]=useState([]);
 
   const setVal=()=>{
-    setItem((old)=>{
-      return( [...old,Ivalue]);
+    setItem(()=>{
+      return( [...item,iValue]);
     });
+    // console.log(iValue)
   };
 
   return (
@@ -21,20 +22,21 @@ function App() {
     <div >
   
 <Header/>
-      <form> 
-        <label>NEW TODO</label>
-       <input value={Ivalue}  onChange={e => setValue(e.target.value)} type="text"></input>
-       <button onClick={setVal} type="submit">ADD</button>
-     
+
+       <form>
+         <input  value={iValue}  onChange={e => setValue(e.target.value)} type="text"/>
+      
        </form>
+       <button onClick={setVal} >ADD</button>
 <ul>
   
-     {item.map((itemVal) =>
+     {item.map((setItem,i) =>
     {
-return <li >{itemVal}</li>
+return <li key={i} >{setItem}</li>
     })}
   
 </ul>
+
     </div>
   );
 }
