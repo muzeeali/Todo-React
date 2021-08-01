@@ -38,3 +38,25 @@
     transform: rotate(360deg);
   }
 }
+#ui{
+margin-top: 1ch;
+height: 50ch;
+width: 50%;
+  border-style: double;
+  margin-left: 25%;
+overflow: scroll;
+background-color: crimson;
+color: ghostwhite;
+}
+body{
+  text-align: center;
+}
+li{
+  list-style: circle;
+text-align: left;
+}
+.btn {
+ position: fixed;
+ right: 29%;
+
+}
