@@ -32,7 +32,7 @@ return i !== id;
 }
 
 const edit = (index) => {
-  const newVal = prompt("Enter");
+  const newVal = prompt("Enter new value:");
 
   setItem(() => {
     item[index]=newVal
