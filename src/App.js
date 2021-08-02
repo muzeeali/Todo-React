@@ -10,12 +10,17 @@ function App() {
   const [item, setItem] = useState([]);
 
   const setVal = () => {
-    setItem(() => {
-      return ([...item, iValue]);
-      
+    
+      if(iValue===''){
+        alert("Please enter a valid input...")
+      }
+      else{
+        setItem(() => { 
+      return ([...item, iValue]); 
     });
     setValue("");
-  };
+  
+  }};
   const deleteItem = (i) => {
     setItem((old) => {
       return old.filter((item,id)=>{
