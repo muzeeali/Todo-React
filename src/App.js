@@ -4,8 +4,6 @@ import React, { useState } from 'react';
 
 function App() {
 
-
-
   const [iValue, setValue] = useState("");
   const [item, setItem] = useState([]);
 
